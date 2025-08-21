@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const HeroSectionContainer = styled.section`
-  height: 300px;
+  height: 400px;
   background-color: #e9ecef;
   position: relative;
   overflow: hidden;
@@ -10,11 +10,15 @@ const HeroSectionContainer = styled.section`
 `;
 
 const HeroWrapper = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;   /* max-width 대신 */
   height: 100%;
   position: relative;
-  padding: 0 20px;
+  padding: 0;
+  // max-width: 1200px;
+  // margin: 0 auto;
+  // height: 100%;
+  // position: relative; 
+  // padding: 0 20px;
 `;
 
 const SlideContainer = styled.div`
@@ -30,10 +34,13 @@ const Slide = styled.div`
   height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   
   ${props => props.active && `
     opacity: 1;
@@ -115,11 +122,11 @@ const Indicator = styled.button`
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const slides = [
-    { id: 1, title: '첫 번째 슬라이드', description: '이미지 슬라이드 1' },
-    { id: 2, title: '두 번째 슬라이드', description: '이미지 슬라이드 2' },
-    { id: 3, title: '세 번째 슬라이드', description: '이미지 슬라이드 3' }
+    { id: 1, image: '/image1.jpg' },
+    { id: 2, image: '/image2.jpg' },
+    { id: 3, image: '/image3.jpg' }
   ];
 
   useEffect(() => {
@@ -150,6 +157,9 @@ const HeroSection = () => {
             <Slide
               key={slide.id}
               active={index === currentSlide}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            // key={slide.id}
+            // active={index === currentSlide}
             >
               <SlideContent>
                 <SlideTitle>{slide.title}</SlideTitle>
@@ -158,14 +168,14 @@ const HeroSection = () => {
             </Slide>
           ))}
         </SlideContainer>
-        
+
         <SlideButton prev onClick={goToPrevSlide}>
           ‹
         </SlideButton>
         <SlideButton next onClick={goToNextSlide}>
           ›
         </SlideButton>
-        
+
         <SlideIndicators>
           {slides.map((_, index) => (
             <Indicator

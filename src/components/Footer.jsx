@@ -16,7 +16,8 @@ const FooterWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  position: relative;
+  padding: 0 40px;
 `;
 
 const FooterLogo = styled.div`
@@ -28,6 +29,9 @@ const FooterLogo = styled.div`
 `;
 
 const FooterCopyright = styled.div`
+  position: absolute;
+  left: 50%;         
+  transform: translateX(-50%);   
   text-align: center;
   
   p {
@@ -48,6 +52,7 @@ const FooterSocial = styled.div`
     font-size: 14px;
     color: #adb5bd;
     text-align: center;
+    
   }
 `;
 
@@ -89,14 +94,14 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo>
-          <div className="logo">로고</div>
+          <div className="logo">just쇼핑몰</div>
         </FooterLogo>
-        
+
         <FooterCopyright>
-          <p>© 2024 Company Name. All rights reserved.</p>
+          <p>© 2025 Company Name. All rights reserved.</p>
           <p>Copyright</p>
         </FooterCopyright>
-        
+
         <FooterSocial>
           <h4>SNS</h4>
           <SocialLinks>

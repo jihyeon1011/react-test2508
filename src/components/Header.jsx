@@ -15,18 +15,18 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 40px;
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 24px;a
   font-weight: bold;
   color: #333;
 `;
 
 const Navigation = styled.nav`
-  flex: 1;
-  margin-left: 50px;
+  // flex: 1;
+  // margin-left: 50px;
 `;
 
 const MenuList = styled.ul`
@@ -113,19 +113,19 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <Logo>로고</Logo>
+        <Logo>JUST 쇼핑몰</Logo>
         <Navigation>
           <MenuList>
             {menuItems.map((menu) => (
-              <MenuItem 
-                key={menu.id} 
+              <MenuItem
+                key={menu.id}
                 onMouseEnter={() => setActiveMenu(menu.id)}
               >
                 <MenuLabel active={activeMenu === menu.id}>{menu.label}</MenuLabel>
                 <SubmenuList>
                   {menu.subMenus.map((subMenu, index) => (
-                    <SubmenuItem 
-                      key={index} 
+                    <SubmenuItem
+                      key={index}
                       active={activeMenu === menu.id && activeSubMenu === `submenu${index + 1}`}
                       onClick={() => setActiveSubMenu(`submenu${index + 1}`)}
                     >

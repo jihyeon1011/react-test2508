@@ -6,6 +6,12 @@ const ContentSectionContainer = styled.section`
   background-color: #ffffff;
   padding: 20px 0;
   width: 100%;
+  height: 450px;          
+  width: 100%;            
+  background-color: #ffffff;
+  display: flex;         
+  justify-content: center;
+  align-items: center;
 `;
 
 const ContentWrapper = styled.div`
@@ -185,7 +191,7 @@ const ContentSection = () => {
               ))}
             </NoticeList>
           </ContentBlock>
-          
+
           <ContentBlock>
             <BlockTitle>갤러리 (C.2)</BlockTitle>
             <GalleryGrid>
