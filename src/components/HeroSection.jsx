@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import shop1 from '../assets/image_shop1.jpg'
+import shop2 from '../assets/image_shop2.jpg'
+import shop3 from '../assets/image_shop3.jpg'
 
 const HeroSectionContainer = styled.section`
   height: 400px;
@@ -124,9 +127,9 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { id: 1, image: '/image1.jpg' },
-    { id: 2, image: '/image2.jpg' },
-    { id: 3, image: '/image3.jpg' }
+    { id: 1, image: shop1 } ,
+    { id: 2, image: shop2 },
+    { id: 3, image: shop3 }
   ];
 
   useEffect(() => {
