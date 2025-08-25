@@ -19,14 +19,14 @@ const HeaderWrapper = styled.div`
 `;
 
 const Logo = styled.div`
-  font-size: 24px;a
+  font-size: 30px;
   font-weight: bold;
   color: #333;
 `;
 
 const Navigation = styled.nav`
-  // flex: 1;
-  // margin-left: 50px;
+  flex: 1;
+  margin-left: 500px;
 `;
 
 const MenuList = styled.ul`
@@ -44,13 +44,14 @@ const MenuItem = styled.li`
 
 const MenuLabel = styled.span`
   font-size: 16px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 700;
+  color: coral;
   padding: 10px 0;
   display: block;
   
   ${props => props.active && `
-    color: #007bff;
+    color: coral;
+    font-size: 20px;
   `}
 `;
 
@@ -61,7 +62,7 @@ const SubmenuList = styled.ul`
   background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px coral;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -94,7 +95,7 @@ const SubmenuItem = styled.li`
   }
   
   ${props => props.active && `
-    background-color: #333;
+    background-color: coral;
     color: white;
   `}
 `;
@@ -113,7 +114,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <Logo>JUST 쇼핑몰</Logo>
+        <Logo>  JUST shopping mall</Logo>
         <Navigation>
           <MenuList>
             {menuItems.map((menu) => (

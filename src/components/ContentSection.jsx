@@ -43,7 +43,7 @@ const BlockTitle = styled.h3`
   font-size: 16px;
   font-weight: 600;
   color: #333;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid coral;
   padding-bottom: 8px;
 `;
 
@@ -116,7 +116,7 @@ const BannerPlaceholder = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #f57c00;
+  color: coral;
   border: 2px dashed #ffb74d;
 `;
 

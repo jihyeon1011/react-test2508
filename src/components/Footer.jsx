@@ -94,7 +94,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo>
-          <div className="logo">just쇼핑몰</div>
+          <div className="logo">JUST shopping mall</div>
         </FooterLogo>
 
         <FooterCopyright>
